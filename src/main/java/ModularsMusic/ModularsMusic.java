@@ -61,14 +61,7 @@ public class ModularsMusic {
             playerManager.loadItem(command.get(1), scheduler);
         });
 
-        commands.put("search", event -> {
-            final String content = event.getMessage().getContent();
-            String query = "ytsearch:" + content.replace("!search", "");
-            final AudioPlaylist queryPlaylist = new BasicAudioPlaylist(query,null,null,true) {};
-            final AudioTrack queryTrack = queryPlaylist.getSelectedTrack();
-            //final AudioReference queryReference = queryTrack.getIdentifier();
-            playerManager.loadItem(queryTrack.getIdentifier(),player);
-            });
+
 
 
                     /*FunctionalResultHandler(playlist -> {
